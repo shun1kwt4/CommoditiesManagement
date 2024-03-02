@@ -1,0 +1,18 @@
+#docker run -itd -p 3000:3000 -v ${PWD}/app:/app node:20.11.1-alpine3.18
+#docker container exec -it コンテナ名 sh
+#npx create-react-app app
+
+FROM node:20.11.1-alpine3.18
+
+# RUN npx create-react-app app
+
+WORKDIR /app
+
+RUN npm install @mui/material @emotion/react @emotion/styled
+
+# COPY /app/ .
+
+# VOLUME [ "./app/:/app/" ]
+
+# CMD ["npm", "start"]
+
