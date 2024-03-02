@@ -1,9 +1,10 @@
 # CommoditiesManagement
 ### 研究室の物品管理システム
 - 実行手順
-1. `git clone https://github.com/murosyo/KeyManager.git`でリモートリポジトリをローカルに持ってくる
-2. `cd KeyManager`でディレクトリに移動
-3. `python main.py`でサーバを起動
+(1. `git clone https://github.com/shun1kwt4/CommoditiesManagement`でリモートリポジトリをローカルに持ってくる)
+1. `git init`でローカルのreactの作業ディレクトリをgitと紐付け
+2. `GUIから作業フォルダのファイルをステージング&コミット
+3. `git remote add origin https://github.com/shun1kwt4/CommoditiesManagement.git`でリモートリポジトリと紐付け
 - 開発手順
 1. `git checkout -b ブランチ名`で必ずブランチを切る（必ずIssueを立て，【Assignees：担当者，labels：実装内容】を設定する）
 2. `git add .`で変更内容をステージに上げる．
