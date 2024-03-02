@@ -2,7 +2,7 @@
 #docker container exec -it コンテナ名 sh
 #npx create-react-app app
 
-FROM node:21.6.2-alpine3.18
+FROM node:20.11.1-alpine3.18
 
 WORKDIR /app
 
