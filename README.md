@@ -1,5 +1,5 @@
-# KeyManager
-### 研究室の鍵管理システム
+# CommoditiesManagement
+### 研究室の物品管理システム
 - 実行手順
 1. `git clone https://github.com/murosyo/KeyManager.git`でリモートリポジトリをローカルに持ってくる
 2. `cd KeyManager`でディレクトリに移動
