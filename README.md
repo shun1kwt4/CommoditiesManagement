@@ -1,7 +1,6 @@
 # CommoditiesManagement
 ### 研究室の物品管理システム
 - 実行手順
-(1. `git clone https://github.com/shun1kwt4/CommoditiesManagement`でリモートリポジトリをローカルに持ってくる)
 1. `git init`でローカルのreactの作業ディレクトリをgitと紐付け
 2. GUIから作業フォルダのファイルをステージング&コミット
 3. `git remote add origin https://github.com/shun1kwt4/CommoditiesManagement.git`でリモートリポジトリと紐付け
