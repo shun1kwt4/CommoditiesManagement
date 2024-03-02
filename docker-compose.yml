@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  # サービス名(任意)
+  react:
+    # ホスト側のディレクトリをコンテナ側のディレクトリにマウントする
+    volumes:
+      - ./app/:/app/
+    # Dockerfileの実行
+    build:
+      context: .
+    # コンテナを起動させ続ける
+    tty: true
+    stdin_open: true
+    # コンテナ側とホスト側のポートの設定を行う
+    ports:
+      - 3000:3000
+    command: sh -c 'npm start'
+
+    #初回 docker-compose up -d --build
+    #2~ docker-compose up -d
