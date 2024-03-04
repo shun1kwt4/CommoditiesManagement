@@ -1,23 +1,35 @@
  export default function Table() {
     const page = 0;
     const items = [];
+
+    // 仮DB
     for (let i = 0; i < 200; i++) {
-        items.push({id: i, name: 'PC', category: 'PC', state: true, remark: 'PC',});
+        if (i%3 == 0){ 
+            items.push({id: i, name: 'PC', category: 'PC', state: true, remark: 'PC',});
+        }
+        else if (i%3 == 1){ 
+            items.push({id: i, name: 'カメラ', category: 'カメラ', state: false, remark: 'カメラ',});
+        }
+        else{
+            items.push({id: i, name: 'スピーカ', category: 'スマートスピーカ', state: true, remark: 'スマートスピーカ',});
+        }
     }
+
+    //ページに応じてreturnするテーブルを作成
     const itemTable = []
     for (let i = page*10; i < page*10+10; i++) {
         itemTable.push(    
             <tr>
                         <td>{items[i].name}</td>
-                        <td>{items[i].categoty}</td>
-                        <td>{items[i].State}</td>
+                        <td>{items[i].category}</td>
+                        <td>{items[i].state ? '貸出可' : '貸出中'}</td>
                         <td>{items[i].remark}</td>               
             </tr>  )
     }
 
     return (
         <>
-            <table border="1">
+            <table border='2'>
                 <tr>
                     <th>Name</th>
                     <th>Category</th>
