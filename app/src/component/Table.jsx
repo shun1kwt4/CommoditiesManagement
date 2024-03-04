@@ -1,4 +1,4 @@
- export default function Table() {
+ export default function Table(props) {
     const page = 0;
     const items = [];
 
@@ -17,7 +17,7 @@
 
     //ページに応じてreturnするテーブルを作成
     const itemTable = []
-    for (let i = page*10; i < page*10+10; i++) {
+    for (let i = props.page*10; i < props.page*10+10; i++) {
         itemTable.push(    
             <tr>
                         <td>{items[i].name}</td>

@@ -1,13 +1,13 @@
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 import {Table} from './component/index';
 
-function App() {
+export default function App() {
+  const [page, setPage] = useState(0);
+
   return (
     <div className="App">
-      <Table />
+      <Table page={page}/>
     </div>
   );
 }
-
-export default App;
