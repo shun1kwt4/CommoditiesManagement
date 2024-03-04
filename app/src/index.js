@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 // import App from './App';
 import './styles/Sidebar.css'
 import reportWebVitals from './reportWebVitals';
-import Sidebar from './component/Sidebar';
+import Sidebar from './components/Sidebar';
 
-export {default as Sidebar} from './component/Sidebar'
+export {default as Sidebar} from './components/Sidebar'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
