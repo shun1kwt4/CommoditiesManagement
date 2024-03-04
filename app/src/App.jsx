@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import './App.css';
-import {Table} from './component/index';
+import {Table} from './components/index';
 
 export default function App() {
   const [page, setPage] = useState(0);
