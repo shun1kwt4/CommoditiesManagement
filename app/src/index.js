@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
+// import App from './App';
+import './styles/Sidebar.css'
 import reportWebVitals from './reportWebVitals';
 import Sidebar from './component/Sidebar';
+
+export {default as Sidebar} from './component/Sidebar'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
