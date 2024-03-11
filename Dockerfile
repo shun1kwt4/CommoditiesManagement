@@ -9,6 +9,7 @@ WORKDIR /app
 # RUN npx create-react-app .
 
 RUN npm install @mui/material @emotion/react @emotion/styled
+RUN npm install express
 
 # COPY /app/ .
 
