@@ -19,6 +19,9 @@ services:
   mysql:
     image: mysql:8.3.0
     restart: always
+    volumes:
+      - ./database/:/database/
+      - ./database/mysql/:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: project443
       MYSQL_PORT: 3306 # MySQLのデフォルトポート
