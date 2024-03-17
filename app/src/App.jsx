@@ -1,10 +1,13 @@
-// import './styles/App.css';
-import{Table, Sidebar} from './index';
+import React, {useState} from 'react';
+import {Table, SearchBox, Sidebar} from './components/components';
 
-function App() {
+export default function App() {
+  const [page, setPage] = useState(0);
+
   return (
-    
+    <div className="App">
+      <SearchBox/>
+      <Table page={page}/>
+    </div>
   );
 }
-
-export default App;

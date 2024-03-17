@@ -16,6 +16,16 @@ services:
     ports:
       - 3000:3000
     command: sh -c 'npm start'
+  mysql:
+    image: mysql:8.3.0
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: project443
+      MYSQL_PORT: 3306 # MySQLのデフォルトポート
+    ports:
+      - 3306:3306 # 3306のポートがきたら、3306のポートを使う
 
     #初回 docker-compose up -d --build
     #2~ docker-compose up -d
+    #mysql -u root -p
+    #passward : project443

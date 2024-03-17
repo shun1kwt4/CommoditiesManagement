@@ -1,19 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-// import App from './App';
-import './styles/Sidebar.css'
+import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Sidebar from './components/Sidebar';
-
-export {default as Sidebar} from './components/Sidebar'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
-    {/* <App />   //一旦コメントアウト */}
+    <App />
 
-    <Sidebar />
   </React.StrictMode>
 );
 
