@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Table,SearchBox} from './components/components';
+import {Table, SearchBox, Sidebar} from './components/components';
 
 export default function App() {
   const [page, setPage] = useState(0);
