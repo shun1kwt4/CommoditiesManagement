@@ -16,7 +16,6 @@ services:
     ports:
       - 3000:3000
     command: sh -c 'npm start'
-<<<<<<< HEAD
   mysql:
     image: mysql:8.3.0
     restart: always
@@ -30,8 +29,3 @@ services:
     #2~ docker-compose up -d
     #mysql -u root -p
     #passward : project443
-=======
-
-    #初回 docker-compose up -d --build
-    #2~ docker-compose up -d
->>>>>>> origin/kkuroki
