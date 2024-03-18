@@ -1,9 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import './index.css';
 =======
 >>>>>>> origin/main
+=======
+import './index.module.css';
+>>>>>>> origin/kkuroki
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -11,12 +15,16 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <App />
 =======
     
     <App />
 
 >>>>>>> origin/main
+=======
+    <App />
+>>>>>>> origin/kkuroki
   </React.StrictMode>
 );
 

@@ -1,5 +1,25 @@
+<<<<<<< HEAD
 .App {
   text-align: center;
+=======
+.App-header {
+  background-color: blue;
+  width: 100%;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.isdl-text {
+  color: white;
+  font-size: 300px; /* テキストサイズを大きく */
+  text-align: left; /* テキストを左揃え */
+}
+
+.App {
+  margin-top: 100px;
+>>>>>>> origin/kkuroki
 }
 
 .App-logo {
@@ -13,6 +33,7 @@
   }
 }
 
+<<<<<<< HEAD
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,6 +45,8 @@
   color: white;
 }
 
+=======
+>>>>>>> origin/kkuroki
 .App-link {
   color: #61dafb;
 }
@@ -36,3 +59,54 @@
     transform: rotate(360deg);
   }
 }
+<<<<<<< HEAD
+=======
+
+body {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  /* 共通のスタイル */
+}
+
+.app.light {
+  background-color: #f1f1f1;
+  /* ライトテーマのスタイル */
+}
+
+.app.dark {
+  background-color: #333;
+  color: #fff;
+  /* ダークテーマのスタイル */
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav li:last-child {
+  margin-right: 0;
+}
+>>>>>>> origin/kkuroki
