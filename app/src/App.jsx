@@ -6,7 +6,7 @@ export default function App() {
   const [message, setMessage] = useState('');
 
   useEffect(() => {
-    fetch("http://localhost:3001/api")
+    fetch("http://localhost:3001/commodities/select")
     .then((res) => {
       console.log(res);
       return res.json();
