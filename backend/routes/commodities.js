@@ -4,7 +4,7 @@ const mysql = require('mysql2');
 
 //mysqlと接続するための設定
 const connection = mysql.createConnection({
-    host: '172.18.0.2',
+    host: '172.18.0.2',//テスト環境
     port: '3306',
     user: 'root',
     password: 'project443',
@@ -20,12 +20,12 @@ router.get('/', (req, res) => {
     });
   });
   
-  // 新規ユーザーの作成
-  router.post('/', (req, res) => {
-    const { name, email } = req.body;
-    const sql = 'INSERT INTO users (name, email) VALUES (?, ?)';
-    connection.query(sql, [name, email], (err, result) => {
+//commodities追加
+router.post('/', (req, res) => {
+    const { name, categories_id, categories_name } = req.body;
+    const sql = 'INSERT INTO commodities(names, categories_id, categories_names) VALUES (?,?,?)';
+    connection.query(sql, [ name, categories_id, categories_name], (err, result) => {
       if (err) throw err;
-      res.send(`User added with ID: ${result.insertId}`);
+      res.send(`commoditiy added with ID: ${result.insertId}`);
     });
   });
