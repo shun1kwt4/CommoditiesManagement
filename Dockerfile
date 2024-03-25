@@ -4,12 +4,14 @@
 
 FROM node:20.11.1-alpine3.18
 
+WORKDIR /backend
+RUN npm install -g express
+RUN npm install -g nodemon
+RUN npm install -g cors
+RUN npm install -g mysql2
+
 WORKDIR /app
-
-# RUN npx create-react-app .
-
-RUN npm install @mui/material @emotion/react @emotion/styled
-RUN npm install express
+RUN npm install -g @mui/material @emotion/react @emotion/styled
 
 # COPY /app/ .
 

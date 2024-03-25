@@ -1,11 +1,11 @@
 version: "3"
-
 services:
   # サービス名(任意)
   react:
     # ホスト側のディレクトリをコンテナ側のディレクトリにマウントする
     volumes:
       - ./app/:/app/
+      - ./backend/:/backend/
     # Dockerfileの実行
     build:
       context: .
@@ -15,7 +15,11 @@ services:
     # コンテナ側とホスト側のポートの設定を行う
     ports:
       - 3000:3000
-    command: sh -c 'npm start'
+      - 3001:3001
+    networks:
+      - dock_default
+    command: sh -c "npm start"
+    # nodemon ../backend/index.js
   mysql:
     image: mysql:8.3.0
     restart: always
@@ -27,8 +31,13 @@ services:
       MYSQL_PORT: 3306 # MySQLのデフォルトポート
     ports:
       - 3306:3306 # 3306のポートがきたら、3306のポートを使う
+    networks:
+      - dock_default
+networks:
+  dock_default:
+    external: true
 
-    #初回 docker-compose up -d --build
+        #初回 docker-compose up -d --build
     #2~ docker-compose up -d
     #mysql -u root -p
     #passward : project443
