@@ -7,6 +7,7 @@ export default function App() {
   return (
     <div className="App">
       <SearchBox/>
+      <Sidebar />
       <Table page={page}/>
       <ChangePassword page={page}/>
       <Login page={page}/>
