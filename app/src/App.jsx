@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Table, SearchBox, Sidebar} from './components/components';
+import {Table, SearchBox, Sidebar, ChangePassword, Login} from './components/components';
 
 export default function App() {
   const [page, setPage] = useState(0);
@@ -8,6 +8,8 @@ export default function App() {
     <div className="App">
       <SearchBox/>
       <Table page={page}/>
+      <ChangePassword page={page}/>
+      <Login page={page}/>
     </div>
   );
 }
