@@ -24,7 +24,7 @@ services:
   #   ports:
   #     - 3306:3306 # 3306のポートがきたら、3306のポートを使う
 
-    #初回 docker-compose up -d --build
-    #2~ docker-compose up -d
+    #初回 docker-compose up -d --build    //イメージ作成およびコンテナ起動コマンド
+    #2~ docker-compose up -d             // コンテナ起動コマンド
     #mysql -u root -p
     #passward : project443
