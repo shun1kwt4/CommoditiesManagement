@@ -1,7 +1,6 @@
 import React from 'react'
 import { SidebarData } from './SidebarData'
 // import '/app/src/styles/Sidebar'
-//aaaa
 
 const Sidebar = () => {
   return (
