@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const SidebarData = [
     {
         title: "Equipments",
@@ -18,5 +16,3 @@ export const SidebarData = [
         link: "/",
       },
 ];
-
-
