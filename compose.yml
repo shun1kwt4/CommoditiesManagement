@@ -8,13 +8,13 @@ services:
       dockerfile: ./frontend/Dockerfile
     # ホスト側のディレクトリをコンテナ側のディレクトリにマウントする
     volumes:
-      - ./frontend/:/app/
+      - ./frontend/:/frontend/
     tty: true
     stdin_open: true
     # コンテナ側とホスト側のポートの設定
     ports:
       - 3000:3000
-    command: sh -c 'npm install & npm start'
+    command: sh -c 'npm install && npm start'
   mysql:
     container_name: commodities_database
     image: mysql:8.3.0

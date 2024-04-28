@@ -1,18 +1,13 @@
-import {useState} from 'react';
-import {Header,Table, SearchBox, Sidebar, ChangePassword, Login} from './components/components';
+import { UIProvider } from "@yamada-ui/react";
+import { Header, Body } from "./components/components";
+import { Table } from "./components/components";
 
 export default function App() {
-  const [page, setPage] = useState(0);
-
   return (
-    <div className="App">
-      <Header>
-      </Header>
-      <SearchBox/>
-      {/* <Sidebar /> */}
-      <Table page={page}/>
-      <ChangePassword page={page}/>
-      <Login page={page}/>
-    </div>
+    <UIProvider>
+      <Header />
+      <Body />
+      <Table></Table>
+    </UIProvider>
   );
 }
