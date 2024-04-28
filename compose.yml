@@ -1,32 +1,29 @@
 version: "3"
 
 services:
-  # サービス名(任意)
   react:
-    container_name: frontend
-    # ホスト側のディレクトリをコンテナ側のディレクトリにマウントする
-    volumes:
-      - ./app/:/app/
-    # Dockerfileの実行
+    container_name: commodities_frontend
     build:
       context: .
-      dockerfile: ./app/Dockerfile
-    # コンテナを起動させ続ける
+      dockerfile: ./frontend/Dockerfile
+    # ホスト側のディレクトリをコンテナ側のディレクトリにマウントする
+    volumes:
+      - ./frontend/:/app/
     tty: true
     stdin_open: true
-    # コンテナ側とホスト側のポートの設定を行う
+    # コンテナ側とホスト側のポートの設定
     ports:
       - 3000:3000
-    # command: sh -c 'npm install & npm start'
+    command: sh -c 'npm install & npm start'
   mysql:
+    container_name: commodities_database
     image: mysql:8.3.0
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: project443
-      MYSQL_PORT: 3306 # MySQLのデフォルトポート
+      MYSQL_PORT: 3306
     ports:
-      - 3306:3306 # 3306のポートがきたら、3306のポートを使う
-
+      - 3306:3306
 
     #初回 docker-compose up -d --build    //イメージ作成およびコンテナ起動コマンド
     #2~ docker-compose up -d             // コンテナ起動コマンド
