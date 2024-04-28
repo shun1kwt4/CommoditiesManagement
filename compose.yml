@@ -5,10 +5,10 @@ services:
     container_name: commodities_frontend
     build:
       context: .
-      dockerfile: ./frontend/Dockerfile
+      dockerfile: ./app/Dockerfile
     # ホスト側のディレクトリをコンテナ側のディレクトリにマウントする
     volumes:
-      - ./frontend/:/frontend/
+      - ./app/:/app/
     tty: true
     stdin_open: true
     # コンテナ側とホスト側のポートの設定

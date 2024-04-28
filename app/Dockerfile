@@ -1,6 +1,6 @@
 FROM node:20.11.1-alpine3.18
 
-WORKDIR /frontend
+WORKDIR /app
 
 # composeでする場合
 # COPY ./frontend/ .
