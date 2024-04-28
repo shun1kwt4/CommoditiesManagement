@@ -5,6 +5,7 @@ export default function Header() {
     <div className="header">
       <Heading>sss</Heading>
       <Divider />
+      <br />
     </div>
   );
 }
