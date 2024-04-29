@@ -10,8 +10,12 @@ import {
 import { useAuth } from "../AuthContext";
 
 export default function Globalmenu() {
-  const { isAdmin } = useAuth();
   const navigate = useNavigate();
+  const { isAdmin } = useAuth();
+
+  const handleButtonClick = (path) => {
+    navigate("/" + path);
+  };
 
   return (
     <div className="header">
@@ -20,17 +24,17 @@ export default function Globalmenu() {
         <Spacer />
         <HStack>
           {isAdmin && (
-            <Button variant="ghost" onClick={() => navigate("/admin")}>
+            <Button variant="ghost" onClick={() => handleButtonClick("admin")}>
               Admin
             </Button>
           )}
-          <Button variant="ghost" onClick={navigate("/")}>
+          <Button variant="ghost" onClick={() => handleButtonClick("")}>
             Commodity
           </Button>
-          <Button variant="ghost" onClick={navigate("/mylist")}>
+          <Button variant="ghost" onClick={() => handleButtonClick("mylist")}>
             MyList
           </Button>
-          <Button variant="ghost" onClick={navigate("/setting")}>
+          <Button variant="ghost" onClick={() => handleButtonClick("setting")}>
             Setting
           </Button>
         </HStack>

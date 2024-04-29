@@ -6,7 +6,6 @@ export default function Login() {
 
   const onSubmit = () => {
     loginProcess();
-    return console.log("clicked");
   };
 
   return (

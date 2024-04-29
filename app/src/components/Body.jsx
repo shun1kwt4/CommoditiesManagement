@@ -13,12 +13,12 @@ export default function Body({ selectedComponent }) {
 
   const switcher = () => {
     switch (selectedComponent) {
-      case "Mylist":
-        return <MyList></MyList>;
       case "admin":
-        return <Admin></Admin>;
+        return <Admin />;
+      case "mylist":
+        return <MyList />;
       case "setting":
-        return <Setting></Setting>;
+        return <Setting />;
       default:
         return <Tables />;
     }
