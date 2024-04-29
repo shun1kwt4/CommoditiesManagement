@@ -1,18 +1,21 @@
-import { useState } from "react";
-// import { Table, SearchBox, Sidebar, ChangePassword, Login } from "./components";
-import { Tables } from "../YamadaComponents/Components";
+import { Login, Tables } from "../YamadaComponents/Components";
+import { useAuth } from "../AuthContext";
 
-export default function Body() {
-  // const [page, setPage] = useState(0);
+export default function Body({ selectedComponent }) {
+  const { isLogin } = useAuth();
 
-  return (
-    <div>
-      {/* <SearchBox />
-      <Sidebar />
-      <Table page={page} />
-      <ChangePassword page={page} />
-      <Login page={page} /> */}
-      <Tables />
-    </div>
-  );
+  const switcher = () => {
+    switch (selectedComponent) {
+      case "Mylist":
+        return <div>My List</div>;
+      case "admin":
+        return <div>admin</div>;
+      case "setting":
+        return <div>setting</div>;
+      default:
+        return <Tables />;
+    }
+  };
+
+  return <>{isLogin ? <Login /> : switcher}</>;
 }

@@ -1,4 +1,4 @@
-export { default as Header } from "./Header";
+export { default as Gmenu } from "./Gmenu";
 export { default as Body } from "./Body";
 
 export { default as Table } from "./Table";
