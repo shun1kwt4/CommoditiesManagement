@@ -1,4 +1,11 @@
-import { Login, Tables } from "../YamadaComponents/Components";
+import { Container } from "@yamada-ui/react";
+import {
+  Admin,
+  Login,
+  MyList,
+  Tables,
+  Setting,
+} from "../YamadaComponents/Components";
 import { useAuth } from "../AuthContext";
 
 export default function Body({ selectedComponent }) {
@@ -7,15 +14,17 @@ export default function Body({ selectedComponent }) {
   const switcher = () => {
     switch (selectedComponent) {
       case "Mylist":
-        return <div>My List</div>;
+        return <MyList></MyList>;
       case "admin":
-        return <div>admin</div>;
+        return <Admin></Admin>;
       case "setting":
-        return <div>setting</div>;
+        return <Setting></Setting>;
       default:
         return <Tables />;
     }
   };
 
-  return <>{isLogin ? <Login /> : switcher}</>;
+  return (
+    <Container centerContent>{!isLogin ? <Login /> : switcher()}</Container>
+  );
 }

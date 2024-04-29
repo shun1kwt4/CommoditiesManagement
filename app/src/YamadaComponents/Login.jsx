@@ -1,7 +1,11 @@
 import { VStack, Button, FormControl, Input } from "@yamada-ui/react";
+import { useAuth } from "../AuthContext";
 
 export default function Login() {
+  const { loginProcess } = useAuth();
+
   const onSubmit = () => {
+    loginProcess();
     return console.log("clicked");
   };
 

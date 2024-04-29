@@ -1,4 +1,4 @@
-import { Gmenu, Body } from "./components/components";
+import { GlobalMenu, Body } from "./components/components";
 import { Routes, Route } from "react-router-dom";
 import { useAuth } from "./AuthContext";
 
@@ -7,7 +7,7 @@ export default function App() {
 
   return (
     <div className="app">
-      {isLogin && <Gmenu />}
+      {isLogin && <GlobalMenu />}
       <Routes>
         <Route path="/" element={<Body />} />
         {isAdmin ?? (

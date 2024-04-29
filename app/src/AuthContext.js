@@ -12,12 +12,17 @@ export const useAuth = () => {
  * @returns AuthContext
  */
 export const AuthProvider = ({ children }) => {
-  const [isLogin, setIsLogin] = React.useState(true);
-  const [isAdmin, setIsAdmin] = React.useState(true);
+  const [isLogin, setIsLogin] = React.useState(false);
+  const [isAdmin, setIsAdmin] = React.useState(false);
+
+  const loginProcess = () => {
+    setIsLogin(true);
+  };
 
   const value = {
     isLogin,
     isAdmin,
+    loginProcess,
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
